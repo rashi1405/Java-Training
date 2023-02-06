@@ -5,7 +5,7 @@ class collection {
   
     public static void main(String[] args)
     {
-        // declaration
+        // Declaration
 
         int arr[] = new int[] { 1, 2, 3, 4 };
         Vector<Integer> v = new Vector<Integer>();
@@ -71,13 +71,16 @@ class collection {
         }
         System.out.println();
 
+      
         //removal
+      
         v.remove(1);
         al.remove(3);
         ll.remove(2);
         stack.pop();
         pQueue.poll();
 
+      
         //after deletion 
 
         System.out.println(v);
