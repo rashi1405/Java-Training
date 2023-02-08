@@ -40,7 +40,7 @@ public class MyController {
 	}
 	
 	@DeleteMapping("/students/{studentId}") 
-	public String deleteStudent(@PathVariable String studentId)  
+	public Student deleteStudent(@PathVariable String studentId)  
 	{
 	      return this.studentService.deleteStudent(Long.parseLong(studentId));
 	}
