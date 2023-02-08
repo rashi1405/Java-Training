@@ -1,6 +1,7 @@
 package com.springrest.springrest.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -38,4 +39,9 @@ public class MyController {
 		return this.studentService.updateStudent(student) ;
 	}
 	
+	@DeleteMapping("/students/{studentId}") 
+	public String deleteStudent(@PathVariable String studentId)  
+	{
+	      return this.studentService.deleteStudent(Long.parseLong(studentId));
+	}
 }
