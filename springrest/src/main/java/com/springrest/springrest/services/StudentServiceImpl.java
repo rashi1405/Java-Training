@@ -18,14 +18,10 @@ public class StudentServiceImpl implements StudentService {
 		list.add(new Student(2,"Samruddhi",16));
 	}
 
-
-
 	@Override
 	public List<Student> getStudents() {
 	    return list;
 	}
-
-
 
 	@Override
 	public Student getStudent(long studentId) {
@@ -40,14 +36,11 @@ public class StudentServiceImpl implements StudentService {
 		return s;
 	}
 
-
-
 	@Override
 	public Student addStudent(Student student) {
 		list.add(student);
 		return student;
 	}
-
 
 
 	@Override
@@ -59,6 +52,17 @@ public class StudentServiceImpl implements StudentService {
 			}
 		});
 		return student ;
+	}
+	
+	
+	@Override
+	public String deleteStudent(long parseLong) {
+		list.forEach(e -> {
+			if(e.getId() == parseLong) {
+				list.remove(e);
+			}
+		});
+		return "Element Deleted";
 	}
 
 }
