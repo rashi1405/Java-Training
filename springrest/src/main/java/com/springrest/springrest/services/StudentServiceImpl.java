@@ -56,13 +56,17 @@ public class StudentServiceImpl implements StudentService {
 	
 	
 	@Override
-	public String deleteStudent(long parseLong) {
-		list.forEach(e -> {
-			if(e.getId() == parseLong) {
-				list.remove(e);
+	public Student deleteStudent(long parseLong) {
+		 Student s = null;
+		
+		for(Student student:list) {
+			if(student.getId() == parseLong) {
+				s = student;
+				list.remove(student);
+				break;
 			}
-		});
-		return "Element Deleted";
+		}
+		return s;
 	}
 
 }
