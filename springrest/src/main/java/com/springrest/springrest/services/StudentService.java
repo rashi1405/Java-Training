@@ -14,6 +14,6 @@ public interface StudentService {
 
     public Student updateStudent(Student student);
 	
-    public String deleteStudent(long parseLong);
+    public Student deleteStudent(long parseLong);
     
 }
